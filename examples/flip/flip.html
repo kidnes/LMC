@@ -1,0 +1,45 @@
+<!Doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>touchmove</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+<link rel="stylesheet" type="text/css" href="flip.css">
+<link rel="stylesheet" type="text/css" href="flip.default.css">
+</head>
+<body>
+
+<div id="flip" class="l-ui-flip">
+    <div style="background-color: yellow">第一页</div>
+    <div style="background-color: blue">第二页</div>
+    <div style="background-color: green">第三页</div>
+    <div style="background-color: red">第四页</div>
+    <div style="background-color: #336699">第五页</div>
+</div>
+
+<script type="text/javascript" src="../../src/core/LTK.js"></script>
+<script type="text/javascript" src="../../src/core/zepto.js"></script>
+<script type="text/javascript" src="../../src/core/gmu.js"></script>
+<script type="text/javascript" src="../../src/core/event.js"></script>
+<script type="text/javascript" src="../../src/core/widget.js"></script>
+<script type="text/javascript" src="../../src/widget/flip/flip.js"></script>
+<script type="text/javascript" src="../../src/widget/flip/arrow.js"></script>
+<script type="text/javascript">
+    var items = [ 
+            '<div style="background-color: yellow">第一页</div>',
+            '<div style="background-color: blue">第二页</div>',
+            '<div style="background-color: green">第三页</div>',
+            '<div style="background-color: red">第四页</div>',
+            '<div style="background-color: #336699">第五页</div>' 
+        ];
+    $('#flip').height($(window).height());
+    // $('#flip').flip( {
+    //     items : items
+    // } );
+
+    var flip = new gmu.Flip($('#flip'), {
+        // items : items
+    })
+</script>
+</body>
+</html>
